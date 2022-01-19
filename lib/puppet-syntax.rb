@@ -22,6 +22,7 @@ module PuppetSyntax
   @fail_on_deprecation_notices = true
   @app_management = Puppet.version.to_i >= 5 ? true : false
   @check_hiera_keys = false
+  @fail_on_unknown_files = false
 
   class << self
     attr_accessor :exclude_paths,
@@ -30,6 +31,7 @@ module PuppetSyntax
                   :manifests_paths,
                   :templates_paths,
                   :fail_on_deprecation_notices,
+                  :fail_on_unknown_files,
                   :epp_only,
                   :check_hiera_keys
     attr_reader :app_management

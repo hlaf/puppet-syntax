@@ -16,6 +16,8 @@ module PuppetSyntax
           errors.concat validate_epp(file)
         elsif File.extname(file) == '.erb'
           errors.concat validate_erb(file)
+        elsif PuppetSyntax.fail_on_unknown_files
+          raise "Cannot validate #{file} - unknown extension: #{File.extname(file)}"
         end
       end
 
