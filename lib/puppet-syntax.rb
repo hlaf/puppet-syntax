@@ -31,6 +31,7 @@ module PuppetSyntax
                   :templates_paths,
                   :fail_on_deprecation_notices,
                   :epp_only,
+                  :erb_only,
                   :check_hiera_keys
     attr_reader :app_management
 
