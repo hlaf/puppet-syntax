@@ -14,7 +14,7 @@ module PuppetSyntax
       filelist.each do |file|
         if File.extname(file) == '.epp' or PuppetSyntax.epp_only
           errors.concat validate_epp(file)
-        elsif File.extname(file) == '.erb'
+        elsif File.extname(file) == '.erb' or PuppetSyntax.erb_only
           errors.concat validate_erb(file)
         elsif PuppetSyntax.fail_on_unknown_files
           raise "Cannot validate #{file} - unknown extension: #{File.extname(file)}"

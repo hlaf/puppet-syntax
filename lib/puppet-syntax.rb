@@ -33,6 +33,7 @@ module PuppetSyntax
                   :fail_on_deprecation_notices,
                   :fail_on_unknown_files,
                   :epp_only,
+                  :erb_only,
                   :check_hiera_keys
     attr_reader :app_management
 
